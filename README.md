@@ -21,3 +21,7 @@ add line
 [ [BUG] Project system data flow 'Workspace update handler ActionBlockSlimAsync`1' closed #432 ](https://github.com/microsoft/vscode-dotnettools/issues/432)
 
 [ LanguageServerProjectSystem throws System.URIFormatException #6218 ](https://github.com/dotnet/vscode-csharp/issues/6218)
+
+## Files
+
+Added `Assets/TerrainSampleAssets` to `.gitignore`.
