@@ -41,11 +41,11 @@
     <Analyzer Include="/home/rafal/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets/StarSparrow/Readme/Readme Files/Scripts/ReadmeStarSparrow.cs" />
-     <Compile Include="Assets/PlayerControls.cs" />
-     <None Include="Assets/TerrainSampleAssets/ThirdPartyNotices.txt" />
-     <None Include="Assets/StarSparrow/Textures/Masks/Readme.txt" />
-     <None Include="Assets/TerrainSampleAssets/ShaderGraphs/CustomFunctions/CustomLighting.hlsl" />
+     <Compile Include="Assets/Scripts/PlayerControls.cs" />
+     <Compile Include="Assets/AssetPacks/StarSparrow/Readme/Readme Files/Scripts/ReadmeStarSparrow.cs" />
+     <None Include="Assets/AssetPacks/TerrainSampleAssets/ThirdPartyNotices.txt" />
+     <None Include="Assets/AssetPacks/StarSparrow/Textures/Masks/Readme.txt" />
+     <None Include="Assets/AssetPacks/TerrainSampleAssets/ShaderGraphs/CustomFunctions/CustomLighting.hlsl" />
     <Reference Include="UnityEngine">
         <HintPath>/home/rafal/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
