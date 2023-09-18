@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -6,27 +7,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
-    // [SerializeField] InputAction movement;
     [SerializeField] float controlSpeed = 10f;
+    [SerializeField] float xRange = 10f;
+    [SerializeField] float yRange = 7f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    private void OnEnable() 
-    {
-        // movement.Enable();
-    }
-
-    private void OnDisable() 
-    {
-        // movement.Disable();
-    }
-
-
-    // Update is called once per frame
     void Update()
     {
         // float horizontalThrow = movement.ReadValue<Vector2>().x;
@@ -36,12 +20,14 @@ public class PlayerControls : MonoBehaviour
         float yThrow = Input.GetAxis("Vertical");
 
         float xOffset = xThrow * Time.deltaTime * controlSpeed;
-        float newXPos = transform.localPosition.x + xOffset;
+        float rawXPos = transform.localPosition.x + xOffset;
+        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
 
         float yOffset = yThrow * Time.deltaTime * controlSpeed;
-        float newYPos = transform.localPosition.y + yOffset;
+        float rawYPos = transform.localPosition.y + yOffset;
+        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
-        transform.localPosition = new Vector3(newXPos, newYPos, transform.localPosition.z);
+        transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
 
 
     }
