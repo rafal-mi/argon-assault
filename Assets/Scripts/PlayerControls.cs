@@ -1,11 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Xml.Serialization;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class PlayerControls : MonoBehaviour
 {
@@ -29,7 +25,6 @@ public class PlayerControls : MonoBehaviour
 
     float xThrow, yThrow;
 
-
     void Update()
     {
         ProcessTranslation();
@@ -37,19 +32,19 @@ public class PlayerControls : MonoBehaviour
         ProcessFiring();
     }
 
-    void ProcessRotation() 
+    void ProcessRotation()
     {
         float pitchDueToPosition = transform.localPosition.y * positionPitchFactor;
         float pitchDueToControlThrow = yThrow * controlPitchFactor;
-
+        
         float pitch = pitchDueToPosition + pitchDueToControlThrow;
         float yaw = transform.localPosition.x * positionYawFactor;
         float roll = xThrow * controlRollFactor;
-
+        
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
-    private void ProcessTranslation()
+    void ProcessTranslation()
     {
         xThrow = Input.GetAxis("Horizontal");
         yThrow = Input.GetAxis("Vertical");
@@ -85,5 +80,4 @@ public class PlayerControls : MonoBehaviour
             emissionModule.enabled = isActive;
         }
     }
-
 }
