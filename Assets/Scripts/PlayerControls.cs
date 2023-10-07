@@ -9,7 +9,7 @@ public class PlayerControls : MonoBehaviour
     [Tooltip("How fast ship moves up and down based upon player input")] 
     [SerializeField] float controlSpeed = 10f;
     [Tooltip("How fast player moves horizontally")] [SerializeField] float xRange = 10f;
-    [Tooltip("How fast player moves vertically")] [SerializeField] float yRange = 7f;
+    [Tooltip("How fast player moves vertically")] [SerializeField] float yRange = 20f;
     
     [Header("Laser gun array")]
     [Tooltip("Add all player lasers here")]
