@@ -14,7 +14,6 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
-    <TargetFramework>net7.0</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -43,6 +42,7 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/PlayerControls.cs" />
      <Compile Include="Assets/Scripts/CollisionHandler.cs" />
+     <Compile Include="Assets/Scripts/Enemy.cs" />
      <Compile Include="Assets/AssetPacks/StarSparrow/Readme/Readme Files/Scripts/ReadmeStarSparrow.cs" />
      <None Include="Assets/AssetPacks/TerrainSampleAssets/ThirdPartyNotices.txt" />
      <None Include="Assets/AssetPacks/StarSparrow/Textures/Masks/Readme.txt" />
